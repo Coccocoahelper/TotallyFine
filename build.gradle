@@ -23,7 +23,7 @@ dependencies {
 	implementation("io.github.axolotlclient.AxolotlClient:AxolotlClient-common:${project.axolotlclient}") {
 		transitive = false
 	}
-	modApi("io.github.moehreag:search-in-resources:1.0.6+1.8.9")
+	//modApi("io.github.moehreag:search-in-resources:1.0.6+1.8.9")
 	modImplementation("io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9")
 	include("io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9")
 	implementation("io.github.axolotlclient.AxolotlClient-config:AxolotlClientConfig-common:${project.axolotlclient_config}")
