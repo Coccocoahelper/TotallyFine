@@ -1,5 +1,6 @@
 plugins {
 	id 'maven-publish'
+	id 'io.freefair.lombok' version '8.12'
 	id 'net.fabricmc.fabric-loom-remap' version '1.14-SNAPSHOT'
 	id 'ploceus' version '1.14-SNAPSHOT'
 }
@@ -10,22 +11,27 @@ base {
 version = "${project.version}+mc${project.minecraft_version}"
 group = project.maven_group
 
-repositories {
-	// Add repositories to retrieve artifacts from in here.
-	// You should only use this when depending on other mods because
-	// Loom adds the essential maven repositories to download Minecraft and libraries from automatically.
-	// See https://docs.gradle.org/current/userguide/declaring_repositories.html
-	// for more information about repositories.
-}
-
 dependencies {
-	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	minecraft("com.mojang:minecraft:${project.minecraft_version}")
 	mappings ploceus.featherMappings(project.feather_build)
-	exceptions ploceus.raven(project.raven_build) // remove this line if not using exceptions patches
-	signatures ploceus.sparrow(project.sparrow_build) // remove this line if not using generics patches
-	nests ploceus.nests(project.nests_build) // remove this line if not using inner class patches
 
-	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation("net.fabricmc:fabric-loader:${project.loader_version}")
+
+	modImplementation("io.github.axolotlclient:AxolotlClient:${project.axolotlclient}+1.8.9") {
+		transitive = false
+	}
+	implementation("io.github.axolotlclient.AxolotlClient:AxolotlClient-common:${project.axolotlclient}") {
+		transitive = false
+	}
+	modApi("io.github.moehreag:search-in-resources:1.0.6+1.8.9")
+	modImplementation("io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9")
+	include("io.github.axolotlclient:AxolotlClient-config:${project.axolotlclient_config}+1.8.9")
+	implementation("io.github.axolotlclient.AxolotlClient-config:AxolotlClientConfig-common:${project.axolotlclient_config}")
+
+	modImplementation("com.terraformersmc:modmenu:0.3.1+mc1.8.9")
+
+	//implementation "it.unimi.dsi:fastutil:8.5.13"
+    //include "it.unimi.dsi:fastutil:8.5.13"
 
 	ploceus.dependOsl(project.osl_version)
 }
@@ -40,13 +46,13 @@ processResources {
 
 tasks.withType(JavaCompile).configureEach {
 	it.options.encoding = 'UTF-8'
-	it.options.release = 8
+	it.options.release = 17
 }
 
 java {
 	// Still required by IDEs such as Eclipse and Visual Studio Code
-	sourceCompatibility = JavaVersion.VERSION_1_8
-	targetCompatibility = JavaVersion.VERSION_1_8
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 
 	// Loom will automatically attach sourcesJar to a RemapSourcesJar task and to the "build" task if it is present.
 	// If you remove this line, sources will not be generated.

@@ -1,26 +1,25 @@
 {
 	"schemaVersion": 1,
-	"id": "example_mod",
+	"id": "totallyfine",
 	"version": "${version}",
-	"name": "Example mod",
+	"name": "TotallyFine",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"thatonecoder"
 	],
 	"contact": {
-		"homepage": "https://example.com/",
-		"sources": "https://github.com/OrnitheMC/ornithe-template-mod"
+		"sources": "https://github.com/Coccocoahelper/TotallyFine"
 	},
-	"license": "CC0-1.0",
-	"icon": "assets/example_mod/icon.png",
-	"environment": "*",
+	"license": "LGPL-3.0-only",
+	"icon": "",
+	"environment": "client",
 	"entrypoints": {
 		"init": [
 			"com.example.example_mod.ExampleMod"
 		]
 	},
 	"mixins": [
-		"example_mod.mixins.json"
+		"totallyfine.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",
