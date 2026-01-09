@@ -22,7 +22,7 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 import io.github.axolotlclient.AxolotlClientConfig.impl.util.ConfigStyles;
 import io.thatonecoder.totallyfine.config.TotallyFineConfig;
 
-public class TotallyFinemModMenu implements ModMenuApi {
+public class TotallyFineModMenu implements ModMenuApi {
 
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {

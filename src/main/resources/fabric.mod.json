@@ -3,7 +3,7 @@
 	"id": "totallyfine",
 	"version": "${version}",
 	"name": "TotallyFine",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "A partial OptiFine replacement; based on Sodium Extra and NotFine",
 	"authors": [
 		"thatonecoder"
 	],
@@ -14,8 +14,14 @@
 	"icon": "",
 	"environment": "client",
 	"entrypoints": {
-		"init": [
-			"com.example.example_mod.ExampleMod"
+		"client-init": [
+			"io.thatonecoder.totallyfine.TotallyFine"
+		],
+		"modmenu": [
+			"io.thatonecoder.totallyfine.TotallyFineModMenu"
+		],
+		"axolotlclient.module": [
+			"io.thatonecoder.totallyfine.AxolotlClientModule"
 		]
 	},
 	"mixins": [

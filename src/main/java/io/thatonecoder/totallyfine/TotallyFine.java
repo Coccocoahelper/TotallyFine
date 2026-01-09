@@ -15,6 +15,11 @@ public class TotallyFine implements ClientModInitializer {
 
 	private static TotallyFine instance;
 
+	// This logger is used to write text to the console and the log file.
+	// It is considered best practice to use your mod name as the logger's name.
+	// That way, it's clear which mod wrote info, warnings, and errors.
+	public static final Logger LOGGER = LogManager.getLogger("TotallyFine");
+
 	// Since AxolotlClient may initialize this class as a module before it gets loaded as a mod by fabric we have to defer the former to run after the latter.
 	// But since the load order is non-deterministic this may not always be the case
 	private static boolean loadedByFabric;
