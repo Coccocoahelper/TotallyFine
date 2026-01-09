@@ -37,7 +37,9 @@ public class TotallyFineConfig {
 	@Getter
     private final OptionCategory category = OptionCategory.create("TotallyFine");
 	private final OptionCategory details = OptionCategory.create("details");
+	private final OptionCategory playerModels = OptionCategory.create("playerModels");
 
+	// Details
 	public final BooleanOption sky = new BooleanOption("sky", true);
 	public final BooleanOption clouds = new BooleanOption("clouds", true);
 	public final BooleanOption stars = new BooleanOption("stars", true);
@@ -48,10 +50,17 @@ public class TotallyFineConfig {
 	public final BooleanOption disableTextShadows = new BooleanOption("disableTextShadows", false);
 	public final BooleanOption renderItemInHand = new BooleanOption("renderItemInHand", true);
 
+	// Player models
+	public final BooleanOption capes = new BooleanOption("capes", true);
+	public final BooleanOption ears = new BooleanOption("ears", true);
+	public final BooleanOption leftArm = new BooleanOption("leftArm", true);
+	public final BooleanOption rightArm = new BooleanOption("rightArm", true);
+
 	public void initConfig() {
 		category.add(
 			details
 		);
+
 		category.add(
 			disableTextShadows,
 			renderItemInHand
@@ -64,7 +73,15 @@ public class TotallyFineConfig {
 			sun,
 			moon,
 			snowAndRain,
-			fog
+			fog,
+			playerModels
+		);
+
+		playerModels.add(
+			capes,
+			ears,
+			leftArm,
+			rightArm
 		);
 
 		ConfigManager configManager = new VersionedJsonConfigManager(FabricLoader.getInstance().getConfigDir().resolve(TotallyFine.MODID + ".json"),

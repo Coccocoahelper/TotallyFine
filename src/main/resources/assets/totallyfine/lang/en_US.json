@@ -7,6 +7,11 @@
     "moon": "Moon",
     "snowAndRain": "Snow & Rain",
     "fog": "Fog",
+    "playerModels": "Player Models",
+    "capes": "Capes",
+    "ears": "Ears",
+    "leftArm": "Left Arm",
+    "rightArm": "Right Arm",
     "disableTextShadows": "Disable Text Shadows",
     "renderItemInHand": "Render Item In Hand"
 }
