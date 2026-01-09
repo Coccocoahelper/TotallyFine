@@ -73,7 +73,10 @@ public class TotallyFineConfig {
 			sun,
 			moon,
 			snowAndRain,
-			fog,
+			fog
+		);
+
+		details.add(
 			playerModels
 		);
 
