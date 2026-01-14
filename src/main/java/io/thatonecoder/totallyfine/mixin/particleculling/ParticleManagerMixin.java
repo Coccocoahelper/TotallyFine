@@ -10,7 +10,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(ParticleManager.class)
-public abstract class ParticleManagerMixin {
+public class ParticleManagerMixin {
 
     @Redirect(
         method = "render",
