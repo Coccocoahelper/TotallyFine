@@ -10,7 +10,9 @@
     	"details.GameRendererMixin",
 		"details.PlayerModelMixin",
     	"details.WorldRendererMixin",
-		"disabletextshadows.TextRendererMixin"
+		"disabletextshadows.TextRendererMixin",
+		"particleculling.ParticleManagerMixin",
+		"particleculling.WorldRendererMixin"
   	],
 	"server": [
 	],

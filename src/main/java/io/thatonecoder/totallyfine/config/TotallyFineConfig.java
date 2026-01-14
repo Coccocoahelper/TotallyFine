@@ -36,8 +36,12 @@ public class TotallyFineConfig {
 
 	@Getter
     private final OptionCategory category = OptionCategory.create("TotallyFine");
+	private final OptionCategory performance = OptionCategory.create("performance");
 	private final OptionCategory details = OptionCategory.create("details");
 	private final OptionCategory playerModels = OptionCategory.create("playerModels");
+
+	// Performance
+	private final BooleanOption particleCulling = new BooleanOption("particleCulling", true);
 
 	// Details
 	public final BooleanOption sky = new BooleanOption("sky", true);
@@ -59,12 +63,17 @@ public class TotallyFineConfig {
 
 	public void initConfig() {
 		category.add(
+			performance,
 			details
 		);
 
 		category.add(
 			disableTextShadows,
 			renderItemInHand
+		);
+
+		performance.add(
+			particleCulling
 		);
 
 		details.add(

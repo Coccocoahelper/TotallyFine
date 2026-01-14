@@ -1,4 +1,6 @@
 {
+    "performance": "Performance",
+    "particleCulling": "Particle Culling",
     "details": "Details",
     "sky": "Sky",
     "clouds": "Clouds",
