@@ -10,7 +10,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GameGui.class)
 public class GameGuiMixin {
-
 	@Inject(
 		method = "renderVignette",
         at = @At("HEAD"),

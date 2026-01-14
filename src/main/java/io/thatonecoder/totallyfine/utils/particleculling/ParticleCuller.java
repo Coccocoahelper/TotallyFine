@@ -14,7 +14,7 @@ public class ParticleCuller {
         Culler camera = ((ICuller) Minecraft.getInstance().worldRenderer).getCamera();
 
         if (camera != null) {
-            return camera.isVisible(instance.getBoundingBox());
+            return camera.isVisible(instance.getShape());
         }
 
         return false;

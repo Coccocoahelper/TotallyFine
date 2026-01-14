@@ -41,7 +41,7 @@ public class TotallyFineConfig {
 	private final OptionCategory playerModels = OptionCategory.create("playerModels");
 
 	// Performance
-	private final BooleanOption particleCulling = new BooleanOption("particleCulling", true);
+	public final BooleanOption particleCulling = new BooleanOption("particleCulling", true);
 
 	// Details
 	public final BooleanOption sky = new BooleanOption("sky", true);
