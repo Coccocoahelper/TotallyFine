@@ -1,9 +1,9 @@
 package io.thatonecoder.totallyfine.mixin.details;
 
 import io.thatonecoder.totallyfine.config.TotallyFineConfig;
-import com.mojang.blaze3d.vertex.BufferBuilder;
 import net.minecraft.world.World;
 import net.minecraft.client.render.world.WorldRenderer;
+import net.minecraft.client.render.vertex.BufferBuilder;
 import com.llamalad7.mixinextras.injector.wrapoperation.Operation;
 import com.llamalad7.mixinextras.injector.wrapoperation.WrapOperation;
 import org.spongepowered.asm.mixin.Mixin;
