@@ -10,7 +10,6 @@ Currently, it has the following features:
 
 Some goals are:
 
-- Vignette option
 - Integration with a future MCPatcher replacement mod (either by me or not, I don't mind)
 - Fully replacing the Vanilla video settings menu, which includes having its options integrated
 - Leaf culling??

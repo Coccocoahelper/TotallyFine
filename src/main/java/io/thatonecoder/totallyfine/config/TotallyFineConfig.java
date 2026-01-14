@@ -47,6 +47,7 @@ public class TotallyFineConfig {
 	public final BooleanOption moon = new BooleanOption("moon", true);
 	public final BooleanOption snowAndRain = new BooleanOption("snowAndRain", true);
 	public final BooleanOption fog = new BooleanOption("fog", true);
+	public final BooleanOption vignette = new BooleanOption("vignette", true);
 	public final BooleanOption disableTextShadows = new BooleanOption("disableTextShadows", false);
 	public final BooleanOption renderItemInHand = new BooleanOption("renderItemInHand", true);
 
@@ -73,7 +74,8 @@ public class TotallyFineConfig {
 			sun,
 			moon,
 			snowAndRain,
-			fog
+			fog,
+			vignette
 		);
 
 		details.add(
