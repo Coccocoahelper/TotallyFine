@@ -17,7 +17,7 @@ public class ItemRendererMixin {
     )
     private void disableGlint(CallbackInfo ci) {
         if (!TotallyFineConfig.instance.glint.get()) {
-            ci.cancel()
+            ci.cancel();
         }
     }
 }

@@ -38,7 +38,7 @@ public class TotallyFineConfig {
     private final OptionCategory category = OptionCategory.create("TotallyFine");
 	private final OptionCategory performance = OptionCategory.create("performance");
 	private final OptionCategory details = OptionCategory.create("details");
-	private final OptionCategory itemRendering = OptionCategory.create("itemRendering")
+	private final OptionCategory itemRendering = OptionCategory.create("itemRendering");
 	private final OptionCategory playerModels = OptionCategory.create("playerModels");
 
 	// Performance
