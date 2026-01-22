@@ -18,7 +18,7 @@ public class AbstractArmorLayerMixin {
 	private LivingEntityRenderer<?> parent;*/
 
     @Inject(
-        method = "renderGlint",
+        method = "renderEnchantmentGlint",
         at = @At("HEAD"),
         cancellable = true
     )
@@ -27,4 +27,5 @@ public class AbstractArmorLayerMixin {
             ci.cancel();
         }
     }
+
 }
