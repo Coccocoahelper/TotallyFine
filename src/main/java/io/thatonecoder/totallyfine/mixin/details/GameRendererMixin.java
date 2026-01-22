@@ -6,6 +6,7 @@ import net.minecraft.client.render.world.WorldRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.ModifyArg;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(GameRenderer.class)
@@ -27,7 +28,7 @@ public class GameRendererMixin {
         return value;
     }
 
-    @ModifyArg(
+    /*@ModifyArg(
         method = "setupFog(IF)V",
         at = @At(
             value = "INVOKE",
@@ -39,7 +40,7 @@ public class GameRendererMixin {
     private float totallyFine$replaceFarFogDistance(float value) {
         if (!TotallyFineConfig.instance.fog.get()) return 1024 * 1024 * 16;
         return value;
-    }
+    }*/
 
     /*@Inject(
         method = "renderFog",
