@@ -11,7 +11,37 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
 
-    @Inject(
+    // Credits to NotFine, for this!
+    @ModifyArg(
+        method = "setupFog",
+        at = @At(
+            value = "INVOKE",
+            target = "Lorg/lwjgl/opengl/GL11;glFogf(IF)V",
+            ordinal = 14,
+            remap = false
+        )
+    )
+    private float totallyFine$nearFogDistance(float value) {
+        // Extremely high values cause issues, but 15 mebimeters out should be practically infinite
+        if (!TotallyFineConfig.instance.fog.get()) return 1024 * 1024 * 15;
+        return value;
+    }
+
+    @ModifyArg(
+        method = "setupFog(IF)V",
+        at = @At(
+            value = "INVOKE",
+            target = "Lorg/lwjgl/opengl/GL11;glFogf(IF)V",
+            ordinal = 15,
+            remap = false
+        )
+    )
+    private float totallyFine$replaceFarFogDistance(float value) {
+        if (!TotallyFineConfig.instance.fog.get()) return 1024 * 1024 * 16;
+        return value;
+    }
+
+    /*@Inject(
         method = "renderFog",
         at = @At("HEAD"),
         cancellable = true
@@ -31,7 +61,7 @@ public class GameRendererMixin {
         if (!TotallyFineConfig.instance.fog.get()) {
             ci.cancel();
         }
-    }
+    }*/
 
     @Inject(
         method = "renderClouds",

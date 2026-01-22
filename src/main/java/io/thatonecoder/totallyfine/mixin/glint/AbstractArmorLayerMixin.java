@@ -12,9 +12,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AbstractArmorLayer.class)
 public class AbstractArmorLayerMixin {
 
-	@Shadow
+	/*@Shadow
 	@Final
-	private LivingEntityRenderer<?> parent;
+	private LivingEntityRenderer<?> parent;*/
 
     @Inject(
         method = "renderGlint",
