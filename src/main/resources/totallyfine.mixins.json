@@ -11,6 +11,8 @@
 		"details.PlayerModelMixin",
     	"details.WorldRendererMixin",
 		"disabletextshadows.TextRendererMixin",
+		"glint.AbstractArmorLayerMixin",
+		"glint.ItemRendererMixin",
 		"particleculling.ParticleManagerMixin",
 		"particleculling.WorldRendererMixin"
   	],

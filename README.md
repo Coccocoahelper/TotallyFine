@@ -8,6 +8,7 @@ Currently, it has the following features:
 - Player model options (from my own work)
 - Disable text shadows option (from moehreag's mod)
 - Render item in hand option (from my own work)
+- Glint option (from my own work)
 
 Some goals are:
 

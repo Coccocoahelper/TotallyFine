@@ -10,11 +10,13 @@
     "snowAndRain": "Snow & Rain",
     "fog": "Fog",
     "vignette": "Vignette",
+    "itemRendering": "Item Rendering",
+    "renderItemInHand": "Render Item In Hand",
+    "glint": "Glint",
     "playerModels": "Player Models",
     "capes": "Capes",
     "ears": "Ears",
     "leftArm": "Left Arm",
     "rightArm": "Right Arm",
-    "disableTextShadows": "Disable Text Shadows",
-    "renderItemInHand": "Render Item In Hand"
+    "disableTextShadows": "Disable Text Shadows"
 }

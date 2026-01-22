@@ -38,6 +38,7 @@ public class TotallyFineConfig {
     private final OptionCategory category = OptionCategory.create("TotallyFine");
 	private final OptionCategory performance = OptionCategory.create("performance");
 	private final OptionCategory details = OptionCategory.create("details");
+	private final OptionCategory itemRendering = OptionCategory.create("itemRendering")
 	private final OptionCategory playerModels = OptionCategory.create("playerModels");
 
 	// Performance
@@ -54,6 +55,7 @@ public class TotallyFineConfig {
 	public final BooleanOption vignette = new BooleanOption("vignette", true);
 	public final BooleanOption disableTextShadows = new BooleanOption("disableTextShadows", false);
 	public final BooleanOption renderItemInHand = new BooleanOption("renderItemInHand", true);
+	public final BooleanOption glint = new BooleanOption("glint", true);
 
 	// Player models
 	public final BooleanOption capes = new BooleanOption("capes", true);
@@ -65,11 +67,6 @@ public class TotallyFineConfig {
 		category.add(
 			performance,
 			details
-		);
-
-		category.add(
-			disableTextShadows,
-			renderItemInHand
 		);
 
 		performance.add(
@@ -84,11 +81,18 @@ public class TotallyFineConfig {
 			moon,
 			snowAndRain,
 			fog,
-			vignette
+			vignette,
+			disableTextShadows
 		);
 
 		details.add(
+			itemRendering,
 			playerModels
+		);
+
+		itemRendering.add(
+			renderItemInHand,
+			glint
 		);
 
 		playerModels.add(
