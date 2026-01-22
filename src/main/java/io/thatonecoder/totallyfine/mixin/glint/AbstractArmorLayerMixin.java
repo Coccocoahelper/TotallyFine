@@ -13,10 +13,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(AbstractArmorLayer.class)
 public class AbstractArmorLayerMixin {
 
-	/*@Shadow
-	@Final
-	private LivingEntityRenderer<?> parent;*/
-
     @Inject(
         method = "renderEnchantmentGlint",
         at = @At("HEAD"),
@@ -27,5 +23,4 @@ public class AbstractArmorLayerMixin {
             ci.cancel();
         }
     }
-
 }

@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class GameRendererMixin {
 
     // Credits to NotFine, for this!
-    @ModifyArg(
+    /*@ModifyArg(
         method = "setupFog",
         at = @At(
             value = "INVOKE",
@@ -28,7 +28,7 @@ public class GameRendererMixin {
         return value;
     }
 
-    /*@ModifyArg(
+    @ModifyArg(
         method = "setupFog(IF)V",
         at = @At(
             value = "INVOKE",
@@ -42,7 +42,7 @@ public class GameRendererMixin {
         return value;
     }*/
 
-    /*@Inject(
+    @Inject(
         method = "renderFog",
         at = @At("HEAD"),
         cancellable = true
@@ -62,7 +62,7 @@ public class GameRendererMixin {
         if (!TotallyFineConfig.instance.fog.get()) {
             ci.cancel();
         }
-    }*/
+    }
 
     @Inject(
         method = "renderClouds",

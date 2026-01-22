@@ -1,6 +1,7 @@
 package io.thatonecoder.totallyfine.mixin.glint;
 
 import io.thatonecoder.totallyfine.config.TotallyFineConfig;
+import net.minecraft.client.resource.model.BakedModel;
 import net.minecraft.client.render.entity.ItemRenderer;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -15,7 +16,7 @@ public class ItemRendererMixin {
         at = @At("HEAD"),
         cancellable = true
     )
-    private void disableGlint(CallbackInfo ci) {
+    private void disableGlint(BakedModel model, CallbackInfo ci) {
         if (!TotallyFineConfig.instance.glint.get()) {
             ci.cancel();
         }
