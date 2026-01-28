@@ -1,4 +1,4 @@
-package io.thatonecoder.totallyfine.mixin.glint;
+package io.thatonecoder.totallyfine.mixin.details;
 
 import io.thatonecoder.totallyfine.config.TotallyFineConfig;
 import net.minecraft.item.ItemStack;
