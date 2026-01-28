@@ -14,6 +14,17 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class AbstractArmorLayerMixin {
 
     @Inject(
+        method = "renderArmor",
+        at = @At("HEAD"),
+        cancellable = true
+    )
+    private void hideArmor(LivingEntity entity, float walkAnimationProgress, float walkAnimationSpeed, float tickDelta, float bob, float yaw, float pitch, float scale, int equipmentSlot, CallbackInfo ci) {
+        if (!TotallyFineConfig.instance.armor.get()) {
+            ci.cancel();
+        }
+    }
+
+    @Inject(
         method = "renderEnchantmentGlint",
         at = @At("HEAD"),
         cancellable = true

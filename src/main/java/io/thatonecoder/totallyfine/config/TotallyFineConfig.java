@@ -60,7 +60,8 @@ public class TotallyFineConfig {
 	public final BooleanOption renderItemInHand = new BooleanOption("renderItemInHand", true);
 	public final BooleanOption glint = new BooleanOption("glint", true);
 
-	// Details - layer models
+	// Details - player models
+	public final BooleanOption armor = new BooleanOption("armor", true);
 	public final BooleanOption capes = new BooleanOption("capes", true);
 	public final BooleanOption ears = new BooleanOption("ears", true);
 	public final BooleanOption leftArm = new BooleanOption("leftArm", true);

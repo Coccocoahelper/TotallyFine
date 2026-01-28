@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(GameRenderer.class)
 public class GameRendererMixin {
 
-    // Credits to NotFine, for this!
+    // Credits to NotFine for this!
     /*@ModifyArg(
         method = "setupFog",
         at = @At(
@@ -97,5 +97,3 @@ public class GameRendererMixin {
         }
     }
 }
-
-

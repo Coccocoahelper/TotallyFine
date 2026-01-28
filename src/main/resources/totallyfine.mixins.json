@@ -8,7 +8,6 @@
 	"client": [
 		"details.GameGuiMixin",
     	"details.GameRendererMixin",
-		"details.ItemRendererMixin",
 		"details.PlayerModelMixin",
     	"details.WorldRendererMixin",
 		"disabletextshadows.TextRendererMixin",
