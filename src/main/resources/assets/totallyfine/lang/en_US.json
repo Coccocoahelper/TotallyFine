@@ -18,5 +18,6 @@
     "ears": "Ears",
     "leftArm": "Left Arm",
     "rightArm": "Right Arm",
-    "disableTextShadows": "Disable Text Shadows"
+    "disableTextShadows": "Disable Text Shadows",
+    "hideXpBar": "Hide XP Bar"
 }

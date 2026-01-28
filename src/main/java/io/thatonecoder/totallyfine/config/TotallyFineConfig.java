@@ -54,10 +54,13 @@ public class TotallyFineConfig {
 	public final BooleanOption fog = new BooleanOption("fog", true);
 	public final BooleanOption vignette = new BooleanOption("vignette", true);
 	public final BooleanOption disableTextShadows = new BooleanOption("disableTextShadows", false);
+	public final BooleanOption hideXpBar = new BooleanOption("hideXpBar", false);
+
+	// Details - item rendering
 	public final BooleanOption renderItemInHand = new BooleanOption("renderItemInHand", true);
 	public final BooleanOption glint = new BooleanOption("glint", true);
 
-	// Player models
+	// Details - layer models
 	public final BooleanOption capes = new BooleanOption("capes", true);
 	public final BooleanOption ears = new BooleanOption("ears", true);
 	public final BooleanOption leftArm = new BooleanOption("leftArm", true);
@@ -82,7 +85,8 @@ public class TotallyFineConfig {
 			snowAndRain,
 			fog,
 			vignette,
-			disableTextShadows
+			disableTextShadows,
+			hideXpBar
 		);
 
 		details.add(

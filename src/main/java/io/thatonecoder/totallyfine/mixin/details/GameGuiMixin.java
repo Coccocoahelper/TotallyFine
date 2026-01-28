@@ -16,7 +16,18 @@ public class GameGuiMixin {
         cancellable = true
 	)
 	private void cancelVignette(float brightnessAtEyes, Window window, CallbackInfo ci) {
-        if (TotallyFineConfig.instance.vignette.get()) {
+        if (!TotallyFineConfig.instance.vignette.get()) {
+		    ci.cancel();
+        }
+	}
+
+	@Inject(
+		method = "renderXpBar",
+        at = @At("HEAD"),
+        cancellable = true
+	)
+	private void hideXpBar(Window window, int x, CallbackInfo ci) {
+        if (TotallyFineConfig.instance.hideXpBar.get()) {
 		    ci.cancel();
         }
 	}

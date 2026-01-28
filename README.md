@@ -3,10 +3,11 @@ This is an Ornithe 1.8.9 partial port of Sodium Extra, with a menu inspired by O
 
 Currently, it has the following features:
 
-- Detail options (from Celeritas Extra, Sodium Extra, and my own work)
+- Sky, clouds, stars, sun, moon, fog, and vignette options (from Celeritas Extra, Sodium Extra, and my own work)
 - Particle culling (from Legacy VanillaFix)
 - Player model options (from my own work)
 - Disable text shadows option (from moehreag's mod)
+- Hide experience bar (from my own work)
 - Render item in hand option (from my own work)
 - Glint option (from my own work)
 
@@ -14,7 +15,7 @@ Some goals are:
 
 - Integration with a future MCPatcher replacement mod (either by me or not, I don't mind)
 - Fully replacing the Vanilla video settings menu, which includes having its options integrated
-- Leaf culling??
+- Leaf culling
 - Integration with more performance mods, in the future
 
 It currently requires Java 21 or higher, because yes.
