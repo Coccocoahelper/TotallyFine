@@ -101,6 +101,7 @@ public class TotallyFineConfig {
 		);
 
 		playerModels.add(
+			armor,
 			capes,
 			ears,
 			leftArm,
