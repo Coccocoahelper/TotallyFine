@@ -42,7 +42,7 @@ public class GameRendererMixin {
         return value;
     }*/
 
-    @Inject(
+    /*@Inject(
         method = "renderFog",
         at = @At("HEAD"),
         cancellable = true
@@ -51,7 +51,7 @@ public class GameRendererMixin {
         if (!TotallyFineConfig.instance.fog.get()) {
             ci.cancel();
         }
-    }
+    }*/
 
     @Inject(
         method = "setupFog",
